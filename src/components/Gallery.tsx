@@ -6,11 +6,11 @@ const Gallery: React.FC = () => {
 
   const monuments = [
     {
-      category: "Single Monuments",
+      category: "Одиночні Пам'ятники",
       images: ["/1.jpg", "/2.jpg", "/3.jpg"],
     },
     {
-      category: "Double Monuments",
+      category: "Подвійні Пам'ятники",
       images: ["/4.jpg", "/5.jpg", "/6.webp"],
     },
   ];
@@ -42,12 +42,11 @@ const Gallery: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Our Work Gallery
+            Галерея Нашої Роботи
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our collection of beautifully crafted monuments, each
-            telling a unique story and serving as a lasting tribute to cherished
-            memories.
+            Дивіться наші колекції з красиво зображенними пам'ятниками, кожен з
+            яких розповідає унікальну історію.
           </p>
         </div>
 
