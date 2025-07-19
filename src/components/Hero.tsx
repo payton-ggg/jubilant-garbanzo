@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           />
 
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-yellow-400 drop-shadow-lg">Ріоліт</span>
+            <span className="text-yellow-300 drop-shadow-lg">Ріоліт</span>
             <br />
             <span className="text-4xl md:text-5xl font-light text-gray-200">
               мономентна майстерня
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
             <a
               href="tel:+380967081858"
-              className="group flex items-center space-x-3 text-xl text-yellow-400 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+              className="group flex items-center space-x-3 text-xl text-yellow-300 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
             >
               <div className="w-12 h-12 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
                 <Phone size={20} />
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
             </a>
             <a
               href="tel:+380967410940"
-              className="group flex items-center space-x-3 text-xl text-yellow-400 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+              className="group flex items-center space-x-3 text-xl text-yellow-300 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
             >
               <div className="w-12 h-12 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
                 <Phone size={20} />
