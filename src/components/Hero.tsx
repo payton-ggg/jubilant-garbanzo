@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-80"
         style={{
           backgroundImage:
-            "url(https://ecopolitic.com.ua/wp-content/uploads/2021/04/shutterstock_616333076.jpg)",
+            "url(https://wallpapercrafter.com/desktop/41204-Switzerland-4K-4k-wallpaper-4K-HD-Mountains-sunset-hills-meadows.jpg)",
         }}
       ></div>
 
@@ -28,13 +28,13 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-20 right-10 w-24 h-24 border border-blue-400 opacity-30 rounded-full animate-pulse delay-1000"></div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto max-lg:mt-20">
         {/* Logo and branding */}
         <div className="mb-12 animate-fade-in">
           <img
             src="/logo-yellow.png"
             alt="Riolit"
-            className="w-24 h-24 text-white drop-shadow-lg bg-gradient-to-br rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+            className="w-24 h-24 text-white drop-shadow-lg bg-gradient-to-br rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl transform hover:scale-105 transition-transform duration-300 max-lg:hidden"
           />
 
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">

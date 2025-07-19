@@ -34,20 +34,32 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-lg" : "bg-transparent"
-      }`}
+        isScrolled ? "shadow-lg bg-white" : "bg-transparent"
+      } ${isMenuOpen ? "bg-white " : ""}`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
             <img
-              src="/logo-removebg.png"
+              src="/logo.png"
               alt="Pantheon"
               className="w-12 h-12 rounded-full flex items-center justify-center"
             />
             <div>
-              <h1 className="text-xl font-bold text-gray-800">Ріоліт</h1>
-              <p className="text-sm text-gray-600">майстерня пам'ятників</p>
+              <h1
+                className={`text-xl font-bold text-white ${
+                  isScrolled ? "text-black" : ""
+                } ${isMenuOpen ? "text-black" : ""}`}
+              >
+                Ріоліт
+              </h1>
+              <p
+                className={`text-sm text-white ${
+                  isScrolled ? "text-black" : ""
+                } ${isMenuOpen ? "text-black" : ""}`}
+              >
+                майстерня пам'ятників
+              </p>
             </div>
           </div>
 
@@ -56,7 +68,9 @@ const Header: React.FC = () => {
               <button
                 key={item}
                 onClick={() => smoothScroll(item)}
-                className="text-gray-700 hover:text-yellow-600 transition-colors duration-200 capitalize font-medium"
+                className={`hover:text-yellow-600 transition-colors duration-200 capitalize font-medium text-white ${
+                  isScrolled ? "text-black" : ""
+                }`}
               >
                 {item}
               </button>
@@ -65,7 +79,9 @@ const Header: React.FC = () => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-700 hover:text-yellow-600 transition-colors duration-200"
+            className={`md:hidden text-white hover:text-yellow-600 transition-colors duration-200 ${
+              isScrolled ? "text-black" : ""
+            } ${isMenuOpen ? "text-black" : ""}`}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

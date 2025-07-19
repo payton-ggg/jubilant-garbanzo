@@ -29,8 +29,7 @@ const Services: React.FC = () => {
         "Послуги підбору кольору",
         "Довічна структурна гарантія",
       ],
-      image:
-        "https://images.pexels.com/photos/4223444/pexels-photo-4223444.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/1.1.jpg",
       price: "Від 2 500$",
     },
     {
@@ -46,8 +45,7 @@ const Services: React.FC = () => {
         "Послуги відновлення фотографій",
         "Точний контроль глибини",
       ],
-      image:
-        "https://images.pexels.com/photos/6646892/pexels-photo-6646892.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "1.2.jpg",
       price: "Від 800$",
     },
     {
@@ -63,8 +61,7 @@ const Services: React.FC = () => {
         "Покращення ландшафту",
         "Налаштування дренажу та обслуговування",
       ],
-      image:
-        "https://images.pexels.com/photos/4223435/pexels-photo-4223435.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/1.3.jpg",
       price: "Від 1 200$",
     },
     {
@@ -80,8 +77,7 @@ const Services: React.FC = () => {
         "Структурне зміцнення",
         "Нанесення захисного покриття",
       ],
-      image:
-        "https://images.pexels.com/photos/4223439/pexels-photo-4223439.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/1.4.webp",
       price: "Від 600$",
     },
   ];
@@ -127,15 +123,13 @@ const Services: React.FC = () => {
               }`}
             >
               <div
-                className={`w-8 h-8 flex items-center justify-center ${
+                className={`w-8 h-8 flex items-center justify-center max-md:hidden ${
                   activeService === index ? "text-white" : "text-yellow-600"
                 }`}
               >
                 {service.icon}
               </div>
-              <span className="font-medium hidden sm:block">
-                {service.title}
-              </span>
+              <span className="font-medium block">{service.title}</span>
             </button>
           ))}
         </div>
@@ -227,7 +221,7 @@ const Services: React.FC = () => {
                 onClick={() => setActiveService(index)}
                 className="text-yellow-600 hover:text-yellow-700 font-medium flex items-center space-x-2 transition-colors duration-200"
               >
-                <span>Learn More</span>
+                <span>Дізнатися більше</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

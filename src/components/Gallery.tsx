@@ -11,7 +11,7 @@ const Gallery: React.FC = () => {
     },
     {
       category: "Подвійні Пам'ятники",
-      images: ["/4.jpg", "/5.jpg", "/6.webp"],
+      images: ["/4.jpg", "/5.jpg", "/6.jpg"],
     },
   ];
 
@@ -39,7 +39,7 @@ const Gallery: React.FC = () => {
 
   return (
     <section id="gallery" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container max-w-[1200px] mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Галерея Нашої Роботи
@@ -70,7 +70,7 @@ const Gallery: React.FC = () => {
                     <img
                       src={image}
                       alt={`${category.category} ${imageIndex + 1}`}
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="w-full h-[500px] object-cover transition-transform duration-300 group-hover:scale-110"
                       onClick={() => openLightbox(globalIndex)}
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300 flex items-center justify-center">
