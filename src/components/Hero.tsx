@@ -8,6 +8,9 @@ const Hero: React.FC = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const phone = "+380967081858";
+  const encodedPhone = encodeURIComponent(phone);
+  const viberLink = `viber://chat?number=${encodedPhone}`;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
@@ -59,7 +62,7 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
             <a
-              href="tel:+380967081858"
+              href={viberLink}
               className="group flex items-center space-x-3 text-xl text-yellow-300 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
             >
               <div className="w-12 h-12 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
