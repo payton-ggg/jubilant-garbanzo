@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-80"
         style={{
           backgroundImage:
-            "url(https://wallpapercrafter.com/desktop/41204-Switzerland-4K-4k-wallpaper-4K-HD-Mountains-sunset-hills-meadows.jpg)",
+            "url(https://ecopolitic.com.ua/wp-content/uploads/2021/04/shutterstock_616333076.jpg)",
         }}
       ></div>
 
@@ -32,17 +32,17 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-20 right-10 w-24 h-24 border border-blue-400 opacity-30 rounded-full animate-pulse delay-1000"></div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto max-lg:mt-20">
+      <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
         {/* Logo and branding */}
         <div className="mb-12 animate-fade-in">
           <img
             src="/logo-yellow.png"
             alt="Riolit"
-            className="w-24 h-24 text-white drop-shadow-lg bg-gradient-to-br rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl transform hover:scale-105 transition-transform duration-300 max-lg:hidden"
+            className="w-24 h-24 text-white drop-shadow-lg bg-gradient-to-br rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl transform hover:scale-105 transition-transform duration-300"
           />
 
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-yellow-300 drop-shadow-lg">Ріоліт</span>
+            <span className="text-yellow-400 drop-shadow-lg">Ріоліт</span>
             <br />
             <span className="text-4xl md:text-5xl font-light text-gray-200">
               мономентна майстерня
@@ -63,17 +63,8 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
             <a
-<<<<<<< Updated upstream
-              href="tel:+380967081858"
-<<<<<<< HEAD
-              className="group flex items-center space-x-3 text-xl text-yellow-400 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
-=======
               href={viberLink}
-              className="group flex items-center space-x-3 text-xl text-yellow-300 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
->>>>>>> Stashed changes
-=======
-              className="group flex items-center space-x-3 text-xl text-yellow-300 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
->>>>>>> a8572c9b28925af229a66f0531e963b23e8abc08
+              className="group flex items-center space-x-3 text-xl text-yellow-400 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
             >
               <div className="w-12 h-12 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
                 <Phone size={20} />
@@ -82,7 +73,7 @@ const Hero: React.FC = () => {
             </a>
             <a
               href="tel:+380967410940"
-              className="group flex items-center space-x-3 text-xl text-yellow-300 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+              className="group flex items-center space-x-3 text-xl text-yellow-400 hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
             >
               <div className="w-12 h-12 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
                 <Phone size={20} />
