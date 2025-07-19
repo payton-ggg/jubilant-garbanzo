@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Angry as Angel } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,34 +10,49 @@ const Header: React.FC = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navMenu = {
+    "про нас": "about",
+    галерея: "gallery",
+    контакти: "contact",
+  };
+
   const smoothScroll = (elementId: string) => {
-    const element = document.getElementById(elementId);
+    const element = document.getElementById(
+      navMenu[elementId as keyof typeof navMenu]
+    );
+
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-lg" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
-              <img src="/logo-removebg.png" alt="Pantheon" className="w-12 h-12 rounded-full flex items-center justify-center" />
+            <img
+              src="/logo-removebg.png"
+              alt="Pantheon"
+              className="w-12 h-12 rounded-full flex items-center justify-center"
+            />
             <div>
-              <h1 className="text-xl font-bold text-gray-800">Riolit</h1>
-              <p className="text-sm text-gray-600">monument workshop</p>
+              <h1 className="text-xl font-bold text-gray-800">Ріоліт</h1>
+              <p className="text-sm text-gray-600">майстерня пам'ятників</p>
             </div>
           </div>
 
           <nav className="hidden md:flex space-x-8">
-            {['about', 'services', 'gallery', 'process', 'contact'].map((item) => (
+            {Object.keys(navMenu).map((item) => (
               <button
                 key={item}
                 onClick={() => smoothScroll(item)}
@@ -59,7 +74,7 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t">
             <nav className="py-4 space-y-2">
-              {['about', 'services', 'gallery', 'process', 'contact'].map((item) => (
+              {Object.keys(navMenu).map((item) => (
                 <button
                   key={item}
                   onClick={() => smoothScroll(item)}

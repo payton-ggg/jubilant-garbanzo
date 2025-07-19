@@ -1,29 +1,21 @@
-import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const monuments = [
     {
-      category: 'Single Monuments',
-      images: [
-        '/1.jpeg',
-        '/2.jpg',
-        '/3.jpg'
-      ]
+      category: "Single Monuments",
+      images: ["/1.jpg", "/2.jpg", "/3.jpg"],
     },
     {
-      category: 'Double Monuments',
-      images: [
-        '/4.jpg',
-        '/5.jpg',
-        '/6.webp'
-      ]
-    }
+      category: "Double Monuments",
+      images: ["/4.jpg", "/5.jpg", "/6.webp"],
+    },
   ];
 
-  const allImages = monuments.flatMap(category => category.images);
+  const allImages = monuments.flatMap((category) => category.images);
 
   const openLightbox = (index: number) => {
     setSelectedImage(index);
@@ -34,11 +26,15 @@ const Gallery: React.FC = () => {
   };
 
   const nextImage = () => {
-    setSelectedImage((prev) => (prev !== null ? (prev + 1) % allImages.length : 0));
+    setSelectedImage((prev) =>
+      prev !== null ? (prev + 1) % allImages.length : 0
+    );
   };
 
   const prevImage = () => {
-    setSelectedImage((prev) => (prev !== null ? (prev - 1 + allImages.length) % allImages.length : 0));
+    setSelectedImage((prev) =>
+      prev !== null ? (prev - 1 + allImages.length) % allImages.length : 0
+    );
   };
 
   return (
@@ -49,20 +45,30 @@ const Gallery: React.FC = () => {
             Our Work Gallery
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our collection of beautifully crafted monuments, each telling a unique story 
-            and serving as a lasting tribute to cherished memories.
+            Explore our collection of beautifully crafted monuments, each
+            telling a unique story and serving as a lasting tribute to cherished
+            memories.
           </p>
         </div>
 
         {monuments.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-16">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-8 text-center">{category.category}</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-8 text-center">
+              {category.category}
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {category.images.map((image, imageIndex) => {
-                const globalIndex = monuments.slice(0, categoryIndex).reduce((sum, cat) => sum + cat.images.length, 0) + imageIndex;
+                const globalIndex =
+                  monuments
+                    .slice(0, categoryIndex)
+                    .reduce((sum, cat) => sum + cat.images.length, 0) +
+                  imageIndex;
                 return (
-                  <div key={imageIndex} className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg">
-                    <img 
+                  <div
+                    key={imageIndex}
+                    className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg"
+                  >
+                    <img
                       src={image}
                       alt={`${category.category} ${imageIndex + 1}`}
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
@@ -90,20 +96,20 @@ const Gallery: React.FC = () => {
             >
               <X size={32} />
             </button>
-            
+
             <img
               src={allImages[selectedImage]}
               alt="Monument"
               className="max-w-full max-h-full object-contain"
             />
-            
+
             <button
               onClick={prevImage}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors duration-200"
             >
               <ChevronLeft size={32} />
             </button>
-            
+
             <button
               onClick={nextImage}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors duration-200"
